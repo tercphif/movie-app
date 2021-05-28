@@ -1,5 +1,4 @@
-<h1><app-header></app-header></h1>
-<hr>
-<h3>Welcome to my first movie app!</h3>
-<hr>
-<app-movie-list></app-movie-list>
+<app-header (showMovies)="onMoviesShown($event)"></app-header>
+
+<app-movie-list *ngIf="showMovieList"></app-movie-list>
+
