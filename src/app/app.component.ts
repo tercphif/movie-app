@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-app';
+  showMovieList = false;
+
+  onMoviesShown(event: boolean) {
+    if (event === true) {
+      this.showMovieList = true
+    }
+    else {
+      this.showMovieList = false
+    }
+  }
 }
