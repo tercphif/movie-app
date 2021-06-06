@@ -6,15 +6,15 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() showMovies = new EventEmitter<boolean>()
+  @Output() showFeature: EventEmitter<string> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onClickedMovies() {
-    this.showMovies.emit(true);
+  onClickFeature(feature: string) {
+    this.showFeature.emit(feature);
   }
 
 }

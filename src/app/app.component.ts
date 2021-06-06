@@ -7,14 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'movie-app';
-  showMovieList = false;
+  navigateFeature = 'movie-list'
 
-  onMoviesShown(event: boolean) {
-    if (event === true) {
-      this.showMovieList = true
-    }
-    else {
-      this.showMovieList = false
-    }
+  onShowList(feature: string) {
+    this.navigateFeature = feature
   }
 }

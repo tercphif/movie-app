@@ -1,4 +1,6 @@
-<app-header (showMovies)="onMoviesShown($event)"></app-header>
+<app-header (showFeature)="onShowList($event)"></app-header>
 
-<app-movie-list *ngIf="showMovieList"></app-movie-list>
+<app-movie-list *ngIf="navigateFeature === 'movie-list'"></app-movie-list>
+
+<app-watchlist *ngIf="navigateFeature !== 'movie-list'"></app-watchlist>
 
